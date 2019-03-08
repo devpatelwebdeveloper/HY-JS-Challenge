@@ -17,3 +17,5 @@ Design details:
 - h1 font size 75px
 - h2 font size 24px
 - p font size 16px / line height 1.7
+
+![alt text](assets/books.jpg)

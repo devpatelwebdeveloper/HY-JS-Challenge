@@ -3,208 +3,50 @@
 <head>
     <title>Devashish Patel Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-        color: #000;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.6;
-        margin:0px;
-    }
-    h1 {
-        font-size: 75px;
-        font-weight: 700;
-        margin: 0px;
-    }
-    h2 {
-        font-size: 24px;
-        font-weight: 700;
-    }
-    p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.7;
-    }
-    .container {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-    .grid-row {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        height:450px;
-    }
-    .grid-item {
-        flex-basis: 50%;
-        -ms-flex: auto;
-        position: relative;
-    }
-    .grid-row a {
-        text-decoration: none;
-    }
-    .imgFull {
-        width:100%;
-        height:auto;
-    }
-    .wrapping-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 2;
-        color: currentColor;
-    }
-    .grid-item-wrapper {
-        -webkit-box-sizing: initial;
-        -moz-box-sizing: initial;
-        box-sizing: initial;
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-    .grid-item-container {
-        height: 100%;
-        width: 100%;
-        position: relative;
-    }
-    input[type="text"] {
-        width: 90%;
-        margin-bottom: 10px;
-        border: 1px solid #000;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    select {
-        width: 90%;
-        margin-bottom: 10px;
-        border: 1px solid #000;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    input[type="submit"] {
-        width: 80px;
-        color: #fff;
-        background: #000;
-        margin-bottom: 10px;
-        border: 1px solid #000;
-        padding: 10px 5px;
-        border-radius: 5px;
-    }
-    .text input[type="text"] {
-        width: 80%;
-    }
-    label {
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-    }
-    .grid-item-content {
-        padding: 20px;
-    }
-    .item-excerpt {
-        margin-bottom: 20px;
-        display: block;
-        font-size: 14px;
-    }
-    
-@media only screen and (max-width: 1333px) {
-    .grid-item {
-        flex-basis: 50%;
-    }
-}
-
-@media only screen and (max-width: 1073px) {
-   .grid-item {
-       flex-basis: 50%;
-    }
-}
-
-@media only screen and (max-width: 815px) {
-  .grid-item {
-    flex-basis: 50%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-    .grid-item {
-        flex-basis: 100%;
-    }
-    h1 {
-        font-size: 30px;
-        font-weight: 700;
-        text-align: center;
-    }
-    h2 {
-        text-align: center;
-    }
-    p {
-        text-align: center;
-    }
-}
-</style>
 <body>
-  <div class="container">
-          <div class="grid-row">
-            <div class="grid-item">
-              <div class="grid-item-wrapper">
-                <div class="grid-item-container">
-                    <img src="assets/books.jpg" class="imgFull" alt="Book" title="Book">
-                </div>
-              </div>
+<div class="row">
+    <div class="col-6">
+        <img src="assets/books.jpg" class="imgFull" alt="Book" title="Book">
+    </div>
+    <div class="col-6">
+        <h1>It's going down for real.</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+        <h2>About you</h2>
+        <form action="/action_page.php">
+           <div class="fieldHalf">
+               <label for="fname">First Name</label>
+               <input type="text" id="fname" name="firstname" placeholder="Jane">
+           </div>
+           <div class="fieldHalf">
+               <label for="lname">Last Name</label>
+               <input type="text" id="lname" name="lastname" placeholder="Doe">
+           </div>
+            <div class="fieldFull">
+                <label for="typeOfBook">Type of Book Choice</label>
+                <select id="typeOfBook" name="typeOfBook">
+                    <option value="Hard cover">Hard cover</option>
+                    <option value="Soft cover">Soft cover</option>
+                    <option value="Kindle Version">Kindle Version</option>
+                    <option value="PDF">PDF</option>
+                </select>
             </div>
-            <div class="grid-item">	   
-              <div class="grid-item-wrapper">
-                <div class="grid-item-container">
-                  <div class="grid-item-content">
-                    <h1>It's going down for real.</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-					  <h2>About you</h2>
-					  <table width="100%">
-						  <tr width="100%" class="text">
-							  <td width="50%">
-								  <label>First Name</label><br>
-								  <input type="text" placeholder="Jane">
-							  </td>
-							  <td width="50%">
-								  <label>Last Name</label><br>
-								  <input type="text" placeholder="Doe">
-							  </td>
-							</tr>
-						  <tr width="100%">
-							  <td colspan="2" width="100%">
-								  <label>Type of Book Choice</label><br>
-                                  <select name="cars">
-                                      <option value="Hard cover">Hard cover</option>
-                                      <option value="Soft cover">Soft cover</option>
-                                      <option value="Kindle Version">Kindle Version</option>
-                                      <option value="PDF">PDF</option>
-                                  </select>
-                              </td>
-						  </tr>
-						  <tr width="100%">
-							  <td colspan="2" width="100%">
-								  <label>Phone Number</label><br>
-								  <input type="text" placeholder="555-555-5555">
-							  </td>
-						  </tr>
-						  <tr width="100%">
-							  <td colspan="2" width="100%">
-								  <input type="Submit" value="Send" />
-							  </td>
-						  </tr>
-					  </table>
-                  </div>
-                </div>
-              </div>
+            <div class="fieldFull">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="555-555-555">
             </div>
-          </div>
-        </div>
+            <div class="fieldFull">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>
+
+
+
+
+
+
